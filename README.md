@@ -21,3 +21,4 @@ Jenkins.instance.pluginManager.plugins.each{
     println ("${plugin.getShortName()}:${plugin.getVersion()}")
 }
 ```
+https://gist.github.com/noqcks/d2f2156c7ef8955619d45d1fe6daeaa9
