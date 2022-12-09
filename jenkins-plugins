@@ -1,6 +1,0 @@
-workflow-aggregator
-git
-ssh
-ssh-agent
-docker-plugin
-docker-build-step

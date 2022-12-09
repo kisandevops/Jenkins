@@ -16,10 +16,11 @@ RUN apt-get update && \
    apt-get -y install docker-ce
 
 # install jenkins plugins
-COPY ./jenkins-plugins /usr/share/jenkins/plugins
-RUN while read i ; \
-                do /usr/local/bin/install-plugins.sh $i ; \
-        done < /usr/share/jenkins/plugins
+COPY ./plugins.txt /usr/share/jenkins/ref/plugins.txt
+# RUN while read i ; \
+#                 do /usr/local/bin/install-plugins.sh $i ; \
+#         done < /usr/share/jenkins/plugins
+RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
 
 #Update the username and password
 ENV JENKINS_USER admin
