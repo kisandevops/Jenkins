@@ -41,5 +41,5 @@ ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 COPY config/*.xml $JENKINS_HOME/
 COPY config/*.groovy /usr/share/jenkins/ref/init.groovy.d/
 
-VOLUME [/var/jenkins_home, "/var/run/docker.sock"]
+VOLUME [$JENKINS_HOME, "/var/run/docker.sock"]
 
