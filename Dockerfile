@@ -13,7 +13,10 @@ RUN apt-get update && \
       $(lsb_release -cs) \
       stable" && \
    apt-get update && \
-   apt-get -y install docker-ce
+   apt-get -y install docker-ce && \
+   usermod -aG docker jenkins
+
+USER jenkins
 
 # install jenkins plugins
 COPY ./plugins.txt /usr/share/jenkins/ref/plugins.txt
