@@ -35,4 +35,5 @@ ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 # use this for creating default admin user
 COPY default-user.groovy /usr/share/jenkins/ref/init.groovy.d/
 
-VOLUME /var/jenkins_home
+VOLUME [/var/jenkins_home, "/var/run/docker.sock"]
+
