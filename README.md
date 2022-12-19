@@ -22,3 +22,7 @@ Jenkins.instance.pluginManager.plugins.each{
 }
 ```
 https://gist.github.com/noqcks/d2f2156c7ef8955619d45d1fe6daeaa9
+
+
+### Jenkins Shared Lib Example
+https://github.com/mkobit/jenkins-pipeline-shared-library-example
